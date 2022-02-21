@@ -1,4 +1,7 @@
-package com.atguigu.com;
+package com.atguigu.bean;
+
+import com.atguigu.bean.Book;
+import com.atguigu.bean.Car;
 
 import java.util.List;
 import java.util.Map;
@@ -18,6 +21,11 @@ public class Person {
 
     public Person() {
         System.out.println("Person创建了");
+    }
+
+    public Person(Car car) {
+        this.car = car;
+        System.out.println("car被有参构造器赋值了");
     }
 
     public Person(String name, String gender) {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car01" class="com.atguigu.bean.Car">
+        <property name="carName" value="宝马"></property>
+        <property name="color" value="gree"></property>
+        <property name="price" value="20000"></property>
+    </bean>
+
+<!--    <bean id="car02" class="com.atguigu.bean.Car">-->
+<!--        <property name="carName" value="宝马"></property>-->
+<!--        <property name="color" value="gree"></property>-->
+<!--        <property name="price" value="20000"></property>-->
+
+    <bean id="book01" class="com.atguigu.bean.Book">
+        <property name="bookName" value="编程01"> </property>
+    </bean>
+
+    <bean id="person02" class="com.atguigu.bean.Person" autowire="constructor">
+        <property name="name" value="#{book01.bookName}"></property>
+        <property name="car" value="#{car01}"></property>
+    </bean>
+
+    <bean id="person03" class="com.atguigu.bean.Person" autowire="constructor">
+        <property name="name" value="#{book01.getBookName()}"></property>
+    </bean>
+
+    <bean id="person04" class="com.atguigu.bean.Person" autowire="constructor">
+        <property name="name" value="#{T(java.util.UUID).randomUUID().toString()}"></property>
+    </bean>
+</beans>

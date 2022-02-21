@@ -1,9 +1,8 @@
 package com.atguigu.test;
 
-import com.atguigu.com.Person;
+import com.atguigu.bean.Person;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class IOC01test {

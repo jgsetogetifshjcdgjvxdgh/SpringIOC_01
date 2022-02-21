@@ -1,9 +1,13 @@
-package com.atguigu.com;
+package com.atguigu.bean;
 
 public class Car {
     private String carName;
     private Integer price;
     private String color;
+
+    public Car() {
+        System.out.println("Car创建了");
+    }
 
     public String getCarName() {
         return carName;

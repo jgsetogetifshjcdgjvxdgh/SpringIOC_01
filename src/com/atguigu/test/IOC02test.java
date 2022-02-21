@@ -1,13 +1,9 @@
 package com.atguigu.test;
 
-import com.atguigu.com.Book;
-import com.atguigu.com.Car;
-import com.atguigu.com.Person;
+import com.atguigu.bean.Person;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.List;
 
 public class IOC02test {
 //    @Test
@@ -58,12 +54,49 @@ public class IOC02test {
 //
 //    }
 
-    @Test
-    public void test5(){
-        ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
-        Person person5 = (Person) ioc.getBean("person05");
+//    @Test
+//    public void test5(){
+//        ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
+//        Person person5 = (Person) ioc.getBean("person05");
+//
+//        System.out.println((person5.getProperties().getProperty("key01")));
+//
+//    }
 
-        System.out.println((person5.getProperties().getProperty("key01")));
+//    @Test
+//    public void test6(){
+//        ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
+//        Person person6 = (Person) ioc.getBean("person06");
+//
+//        System.out.println((person6.getMaps()));
+//
+//    }
+
+//    @Test
+//    public void test7(){
+//        ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
+//        Person person7 = (Person) ioc.getBean("person07");
+//
+//        System.out.println((person7.getCar().getPrice()));
+//
+//    }
+
+//    @Test
+//    public void test8(){
+//        ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
+//        Person person9 = (Person) ioc.getBean("person09");
+//
+//        System.out.println((person9.getGender()));
+//
+//    }
+
+    @Test
+    public void test10(){
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
+        Person person10 = (Person) ioc.getBean("person10");
+
+        System.out.println((person10.getGender()));
 
     }
+
 }

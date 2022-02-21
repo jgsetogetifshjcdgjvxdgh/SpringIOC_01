@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person01" class="com.atguigu.bean.Person" depends-on="book01,car01"></bean>
+    <bean id="car01" class="com.atguigu.bean.Car"></bean>
+    <bean id="book01" class="com.atguigu.bean.Book"></bean>
+
+    <bean id="person02" class="com.atguigu.bean.Person"></bean>
+
+    <bean id="person03" class="com.atguigu.bean.Person" scope="prototype"></bean>
+
+    <bean class="com.atguigu.factory.AirPlaneStaticFactory" factory-method="getAirPlane">
+        <constructor-arg name="jzName" value="jzName01"></constructor-arg>
+    </bean>
+
+    <bean id="factory01" class="com.atguigu.factory.AirPlaneFactory">
+
+    </bean>
+
+    <bean id="airPlane02" class="com.atguigu.bean.AirPlane" factory-bean="factory01" factory-method="getAirPlane" >
+        <constructor-arg value="jzName02"></constructor-arg>
+    </bean>
+
+    <bean id="myFactoryBean01" class="com.atguigu.factory.MyFactoryBeanImpl"></bean>
+
+    <bean id="book_lifeCycle" class="com.atguigu.bean.Book" init-method="myInit" destroy-method="myDestroy"></bean>
+
+    <bean id="myBeanPostProcessor" class="com.atguigu.bean.MyBeanPostProcessor"></bean>
+
+    <bean id="book_myBeanPostProcessor" class="com.atguigu.bean.Book" init-method="myInit" destroy-method="myDestroy"></bean>
+
+</beans>

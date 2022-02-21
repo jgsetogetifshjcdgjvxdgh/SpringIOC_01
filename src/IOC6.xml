@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/jdbc
+            http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+<!--       <context:component-scan base-package="com.atguigu" use-default-filters="false">-->
+<!--&lt;!&ndash;           <context:include-filter type="annotation" expression="com.atguigu.controller"></context:include-filter>&ndash;&gt;-->
+<!--&lt;!&ndash;           <context:exclude-filter type="annotation" expression ="com.atguigu.service.impl.BookServiceImpl"></context:exclude-filter>&ndash;&gt;-->
+<!--       </context:component-scan>-->
+    <context:component-scan base-package="com.atguigu">
+
+    </context:component-scan>
+</beans>
